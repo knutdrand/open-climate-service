@@ -226,6 +226,23 @@ Monthly mean of the Terra and Aqua 16-day composites whose window is centred in 
 
 ---
 
+## ESA CCI / C3S — land cover (yearly)
+
+| Property               | Value                                                                                    |
+| ---------------------- | ---------------------------------------------------------------------------------------- |
+| **Dataset IDs**        | `esacci_landcover_fraction_yearly`, `esacci_landcover_class_yearly`                      |
+| **Variables**          | `land_cover_fraction` (with a `land_cover_class` dimension), `lccs_class`                |
+| **Units**              | 1                                                                                        |
+| **Period**             | Yearly, 1992–2020                                                                        |
+| **Spatial resolution** | ~1 km (fractions), 300 m (classes)                                                       |
+| **Source**             | [ESA CCI land cover on Planetary Computer](https://planetarycomputer.microsoft.com/dataset/esa-cci-lc) |
+
+The fractions dataset holds, for each of ten class groups (cropland, tree cover, shrubland, grassland, sparse vegetation, wetland, urban, bare, water, snow and ice), the share of each cell the group covers. Aggregating it with `mean` gives each group's share of a district, one row per group. To export a single group, select it with `filter_labels` on `land_cover_class` and remove the dimension with `drop_dimension` before aggregating. The class dataset keeps the 37 published codes for display and uses `mode` pyramid resampling.
+
+**Access** — none required.
+
+---
+
 ## Overture Maps — administrative divisions (feature collection)
 
 | Property             | Value                                                                   |

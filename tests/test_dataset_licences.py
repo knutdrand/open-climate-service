@@ -150,6 +150,7 @@ _REVIEWED_SOURCE_TERMS: dict[str, frozenset[str]] = {
     "cams.yaml": frozenset({ATTRIBUTION}),  # Licence to Use Copernicus Products (CAMS)
     "glofas.yaml": frozenset({ATTRIBUTION}),  # Licence to Use Copernicus Products (CEMS)
     "copdem90.yaml": frozenset({ATTRIBUTION}),  # License to Use Copernicus DEM (GLO-90 is free for any use)
+    "modis_vi.yaml": frozenset(),  # NASA Earth science data: no copyright, no use restrictions
 }
 
 

@@ -152,6 +152,8 @@ _REVIEWED_SOURCE_TERMS: dict[str, frozenset[str]] = {
     "copdem90.yaml": frozenset({ATTRIBUTION}),  # License to Use Copernicus DEM (GLO-90 is free for any use)
     "modis_vi.yaml": frozenset(),  # NASA Earth science data: no copyright, no use restrictions
     "esa_cci_lc.yaml": frozenset({ATTRIBUTION}),  # ESA CCI / C3S land cover: free use with attribution
+    "imerg.yaml": frozenset(),  # NASA Earth science data: no copyright, no use restrictions
+    "mcdwd.yaml": frozenset(),  # NASA Earth science data: no copyright, no use restrictions
 }
 
 

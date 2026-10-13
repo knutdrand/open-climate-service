@@ -137,6 +137,60 @@ Daily statistics computed by the CDS from hourly ERA5-Land. Soil moisture is the
 
 ---
 
+## ERA5-HEAT — heat stress, UTCI (daily)
+
+| Property               | Value                                                                                 |
+| ---------------------- | ------------------------------------------------------------------------------------- |
+| **Dataset IDs**        | `era5heat_utci_max_daily`, `era5heat_utci_mean_daily`                                 |
+| **Variable**           | `utci`                                                                                |
+| **Units**              | degC                                                                                  |
+| **Period**             | Daily, in the instance's local day                                                    |
+| **Spatial resolution** | ~28 km (0.25°)                                                                        |
+| **Record start**       | 1940-01-01                                                                            |
+| **Source**             | [ERA5-HEAT (CDS)](https://cds.climate.copernicus.eu/datasets/derived-utci-historical) |
+
+Daily maximum or mean of the hourly Universal Thermal Climate Index. Consolidated data is used where published, the intermediate product for the most recent months.
+
+**Access** — a CDS key, and the dataset licence accepted on its CDS page.
+
+---
+
+## CAMS — dust aerosol optical depth and PM10 (daily)
+
+| Property               | Value                                                                                                                                                                                                                 |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Dataset IDs**        | `cams_dust_aod_daily`, `cams_pm10_daily`                                                                                                                                                                              |
+| **Variables**          | `duaod550`, `pm10`                                                                                                                                                                                                    |
+| **Units**              | 1, ug m-3                                                                                                                                                                                                             |
+| **Period**             | Daily mean, in the instance's local day                                                                                                                                                                               |
+| **Spatial resolution** | ~80 km (0.75°)                                                                                                                                                                                                        |
+| **Record start**       | 2003-01-01                                                                                                                                                                                                            |
+| **Source**             | [CAMS EAC4](https://ads.atmosphere.copernicus.eu/datasets/cams-global-reanalysis-eac4) and [CAMS global forecasts](https://ads.atmosphere.copernicus.eu/datasets/cams-global-atmospheric-composition-forecasts) (ADS) |
+
+The EAC4 reanalysis while it lasts (about a year behind), then the 00 UTC CAMS forecast run interpolated onto the EAC4 grid. The two systems differ, so expect a step in the series where they meet.
+
+**Access** — the CDS key works on the ADS, but the ADS site terms and both dataset licences have to be accepted once in the browser.
+
+---
+
+## GloFAS — river discharge (daily)
+
+| Property               | Value                                                                                          |
+| ---------------------- | ---------------------------------------------------------------------------------------------- |
+| **Dataset ID**         | `glofas_river_discharge_daily`                                                                 |
+| **Variable**           | `dis24`                                                                                        |
+| **Units**              | m3 s-1                                                                                         |
+| **Period**             | Daily                                                                                          |
+| **Spatial resolution** | ~5 km (0.05°)                                                                                  |
+| **Record start**       | 1979-01-01                                                                                     |
+| **Source**             | [GloFAS historical (EWDS)](https://ewds.climate.copernicus.eu/datasets/cems-glofas-historical) |
+
+Daily mean river discharge simulated by GloFAS v4 (set `version: "5"` in the template for v5). Only river cells carry river flow, so aggregate it by reading the river cell that represents each district rather than by a zonal mean.
+
+**Access** — the CDS key works on the EWDS, but the EWDS site terms and the dataset licence have to be accepted once in the browser.
+
+---
+
 ## Overture Maps — administrative divisions (feature collection)
 
 | Property             | Value                                                                   |
